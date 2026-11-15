@@ -1,0 +1,636 @@
+{
+  "language": {
+    "label": "Language",
+    "az": "Azərbaycanca",
+    "en": "English"
+  },
+  "app": {
+    "name": "Baku Evacuation",
+    "dispatchTitle": "Dispatcher Panel",
+    "fhn": "MES",
+    "loading": "Loading…",
+    "retry": "Try again",
+    "close": "Close",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "back": "Back",
+    "notFound": "Page not found",
+    "goHome": "Back to home",
+    "unknownError": "Something went wrong",
+    "networkError": "Could not reach the server",
+    "empty": "No data"
+  },
+  "units": {
+    "m": "m",
+    "km": "km",
+    "min": "min",
+    "sec": "s",
+    "people": "people"
+  },
+  "time": {
+    "justNow": "just now",
+    "secondsAgo": "{n} s ago",
+    "minutesAgo": "{n} min ago",
+    "hoursAgo": "{n} h ago"
+  },
+  "pointType": {
+    "shelter": "Shelter",
+    "park": "Park",
+    "stadium": "Stadium"
+  },
+  "pointStatus": {
+    "active": "Active",
+    "reserve": "Reserve",
+    "closed": "Closed"
+  },
+  "occupancy": {
+    "low": "Space available",
+    "mid": "Filling up",
+    "high": "Almost full",
+    "label": "Occupancy"
+  },
+  "sosType": {
+    "fire": "Fire",
+    "collapse": "Collapse",
+    "flood": "Flood",
+    "medical": "Medical"
+  },
+  "sosStatus": {
+    "new": "New",
+    "assigned": "Assigned",
+    "resolved": "Resolved",
+    "rejected": "Closed"
+  },
+  "brigadeType": {
+    "fire": "Firefighting",
+    "medical": "Ambulance",
+    "rescue": "Rescue"
+  },
+  "brigadeStatus": {
+    "idle": "Available",
+    "en_route": "En route",
+    "on_site": "On site",
+    "returning": "Returning"
+  },
+  "roadStatus": {
+    "open": "Open",
+    "congested": "Congested",
+    "closed": "Closed"
+  },
+  "rerouteReason": {
+    "initial": "Initial route",
+    "road_closed": "Road closed: new route",
+    "point_full": "Point is full: new destination",
+    "alert_new_point": "Dispatcher opened a new point",
+    "barrier": "Obstacle on your route: new step-free route"
+  },
+  "citizen": {
+    "onboarding": {
+      "title": "Let’s guide you to safety",
+      "subtitle": "We need your location to find the nearest assembly point and to send an SOS.",
+      "allow": "Allow location access",
+      "locating": "Finding your location…",
+      "denied": "Location access denied",
+      "deniedHint": "Choose your district or tap where you are on the map.",
+      "chooseZone": "Choose a district",
+      "tapMap": "Show your location on the map",
+      "tapMapHint": "Tap where you are",
+      "continue": "Continue",
+      "privacy": "Your data is used only for rescue purposes.",
+      "manual": "Set manually"
+    },
+    "nearest": {
+      "title": "Nearest assembly points",
+      "subtitle": "Sorted by distance and occupancy",
+      "empty": "No active assembly points nearby",
+      "emptyHint": "Move the map or check again in a moment.",
+      "error": "Could not load assembly points",
+      "nearFull": "Almost full",
+      "route": "Get route",
+      "walk": "on foot",
+      "offlineCached": "Last saved data",
+      "miSubtitle": "Only wheelchair-accessible points are shown"
+    },
+    "route": {
+      "to": "Destination",
+      "eta": "Estimated time",
+      "distance": "Distance",
+      "arrived": "I’ve arrived",
+      "cancel": "Close route",
+      "building": "Building route…",
+      "error": "Could not build a route",
+      "version": "v{n}",
+      "versionAria": "Route version {n}",
+      "arrivedHint": "“I’ve arrived” unlocks within 100 m — {d} to go",
+      "suggest": "Next accessible point: {name}",
+      "showDetails": "Show details",
+      "hideDetails": "Hide details"
+    },
+    "checkIn": {
+      "title": "You are at a safe assembly point",
+      "subtitle": "Your check-in was received. Follow the instructions of volunteers and MES staff.",
+      "done": "Close",
+      "error": "Check-in failed"
+    },
+    "reroute": {
+      "title": "Route changed",
+      "newEta": "New time",
+      "ok": "Got it",
+      "diffPlus": "+{n} min",
+      "diffMinus": "−{n} min",
+      "diffZero": "No change in time"
+    },
+    "safe": {
+      "button": "I’m safe",
+      "confirmTitle": "Thank you!",
+      "confirmText": "Your status has been marked as “safe”.",
+      "error": "Could not update your status",
+      "already": "Marked as safe"
+    },
+    "sos": {
+      "button": "SOS",
+      "buttonAria": "Call for emergency help (SOS)",
+      "title": "What happened?",
+      "subtitle": "Send a signal with one tap. Your location is added automatically.",
+      "countdown": "Sending signal",
+      "countdownHint": "Pressed by mistake? Cancel it",
+      "cancel": "Cancel",
+      "sending": "Sending…",
+      "received": "Your signal was received",
+      "queued": "Signal queued",
+      "queuedHint": "It will be sent automatically when the connection is back.",
+      "statusNew": "Your signal reached the dispatcher; a brigade is being assigned",
+      "statusAssigned": "A brigade is on its way",
+      "statusAssignedEta": "A brigade is on its way — about {eta} min",
+      "statusResolved": "The incident has been resolved",
+      "stayCalm": "Stay calm and remain somewhere safe if you can.",
+      "cooldown": "You have already sent a signal",
+      "cooldownLeft": "You can send again in: {s}",
+      "noLocation": "Location unknown — the signal will be sent for your district",
+      "error": "Signal not sent",
+      "close": "Close",
+      "steps": {
+        "new": "Received",
+        "assigned": "Brigade en route",
+        "resolved": "Resolved"
+      },
+      "note": "Note (optional)",
+      "notePlaceholder": "E.g. 3rd floor, 2 people",
+      "brigade": "Brigade #{id}",
+      "etaCountdown": "Arrives in: {t}",
+      "etaArriving": "The brigade is arriving",
+      "cooldownShort": "Wait {t}",
+      "duplicate": "This incident has already been reported. Your signal was merged into it and we are tracking it."
+    },
+    "offline": {
+      "bar": "No connection — showing the latest saved data",
+      "back": "Connection restored",
+      "queuedSent": "Queued SOS signal was sent"
+    },
+    "location": {
+      "me": "My location",
+      "recenter": "Back to my location",
+      "accuracy": "Accuracy: ±{m} m"
+    },
+    "broadcast": "Official notice",
+    "legend": {
+      "closed": "Closed road",
+      "congested": "Congestion"
+    },
+    "sheet": {
+      "handle": "Drag the panel"
+    },
+    "tabs": {
+      "label": "Sections",
+      "map": "Map",
+      "points": "Points",
+      "sos": "My signals",
+      "me": "Me"
+    },
+    "pointsTab": {
+      "title": "Assembly points",
+      "subtitle": "Sorted by distance",
+      "all": "All",
+      "filterLabel": "Point type",
+      "search": "Search points…",
+      "noLocation": "Set your location to see distances",
+      "routeStarted": "Route ready"
+    },
+    "sosTab": {
+      "title": "My signals",
+      "subtitle": "SOS status and history",
+      "send": "Send SOS",
+      "current": "Current signal",
+      "history": "History",
+      "empty": "You haven’t sent any signals yet",
+      "emptyHint": "In danger, press the button below — the signal reaches the dispatcher instantly.",
+      "queued": "Signals waiting to be sent",
+      "queuedHint": "They will be sent automatically when the internet is back.",
+      "error": "Could not load signals",
+      "cooldown": "Next signal in: {s}"
+    },
+    "me": {
+      "title": "Me",
+      "subtitle": "Status, location and emergency numbers",
+      "status": "My status",
+      "safeSince": "Marked as safe at {t}",
+      "notMarked": "Status not reported yet",
+      "location": "Location",
+      "gps": "Automatic (GPS)",
+      "manual": "Set manually",
+      "none": "Not set",
+      "district": "District",
+      "change": "Change location",
+      "emergency": "Emergency numbers",
+      "call": "Call {n}",
+      "numbers": {
+        "101": "Fire service",
+        "102": "Police",
+        "103": "Ambulance",
+        "112": "Emergencies (MES)"
+      },
+      "device": "Device ID",
+      "tipsTitle": "During evacuation",
+      "tips": [
+        "Stay calm and follow the route instructions.",
+        "Do not use elevators — take the stairs.",
+        "Take your documents, medicines and water.",
+        "Help elderly people and children."
+      ]
+    },
+    "register": {
+      "title": "Registration",
+      "subtitle": "Takes a minute. The phone number is optional.",
+      "phone": "Phone number (optional)",
+      "phoneHint": "Format: +994 50 123 45 67",
+      "phoneInvalid": "Enter the number in +994 format",
+      "mi": "Person with reduced mobility",
+      "miHelp": "You will get step-free routes without stairs, and your SOS will be prioritised by dispatchers.",
+      "continue": "Continue",
+      "saving": "Saving…",
+      "error": "Registration failed"
+    },
+    "profile": {
+      "title": "Profile",
+      "save": "Save",
+      "saved": "Profile updated"
+    },
+    "status": {
+      "switch": "I’m safe",
+      "on": "You are marked as safe",
+      "off": "Not marked as safe yet",
+      "error": "Could not update your status"
+    },
+    "header": {
+      "online": "Connected",
+      "offline": "Offline"
+    }
+  },
+  "auth": {
+    "title": "Dispatcher sign-in",
+    "subtitle": "Ministry of Emergency Situations — operations control",
+    "username": "Username",
+    "password": "Password",
+    "submit": "Sign in",
+    "submitting": "Checking…",
+    "error": "Sign-in failed",
+    "logout": "Sign out",
+    "demoHint": "Demo mode: any username and password",
+    "sessionExpired": "Your session has expired, please sign in again",
+    "lockedFor": "Sign-in is temporarily locked. Try again in {t}"
+  },
+  "dispatch": {
+    "live": "Live",
+    "disconnected": "Disconnected",
+    "connecting": "Connecting…",
+    "demoMode": "Demo mode",
+    "mute": "Mute sound",
+    "unmute": "Unmute sound",
+    "kpi": {
+      "activeSos": "Active SOS",
+      "resolved": "Resolved",
+      "safe": "Safe citizens",
+      "inDanger": "In danger",
+      "idleBrigades": "Available brigades",
+      "busyBrigades": "Busy brigades",
+      "avgOccupancy": "Avg. occupancy",
+      "activeAlerts": "Active alerts",
+      "citizens": "Citizens",
+      "brigades": "Brigades",
+      "dangerSafe": "in danger / safe",
+      "idleBusy": "idle / busy"
+    },
+    "layers": {
+      "title": "Layers",
+      "sos": "SOS signals",
+      "heatmap": "Heatmap",
+      "zones": "Districts",
+      "points": "Assembly points",
+      "brigades": "Brigades",
+      "roads": "Roads",
+      "barriers": "Barriers",
+      "alerts": "Alert circles",
+      "legend": "Legend",
+      "closed": "Closed road",
+      "congested": "Congestion (width = severity)"
+    },
+    "feed": {
+      "title": "SOS feed",
+      "search": "Search…",
+      "searchAria": "Search SOS signals",
+      "allZones": "All districts",
+      "allTypes": "All types",
+      "allStatuses": "All statuses",
+      "activeOnly": "Active",
+      "empty": "No SOS match the filters",
+      "error": "Could not load the SOS list",
+      "assign": "Assign brigade",
+      "resolve": "Resolved",
+      "priority": "Priority",
+      "count": {
+        "one": "{n} signal",
+        "other": "{n} signals"
+      },
+      "assignedTo": "Brigade: {name}"
+    },
+    "assign": {
+      "title": "Assign brigade",
+      "subtitle": "Available brigades, sorted by arrival time",
+      "empty": "No brigades available right now",
+      "action": "Assign",
+      "success": "Brigade assigned",
+      "error": "Assignment failed",
+      "resolved": "SOS marked as resolved"
+    },
+    "tabs": {
+      "brigades": "Brigades",
+      "points": "Points",
+      "analytics": "Analytics",
+      "sos": "SOS",
+      "alerts": "Alerts",
+      "simulation": "Simulation"
+    },
+    "brigades": {
+      "empty": "No brigades",
+      "error": "Could not load brigades",
+      "target": "Target",
+      "noTarget": "No task"
+    },
+    "points": {
+      "name": "Assembly point",
+      "occupancy": "Occupancy",
+      "capacity": "Capacity",
+      "reserve": "Reserve",
+      "empty": "No assembly points",
+      "error": "Could not load assembly points"
+    },
+    "analytics": {
+      "perMinute": "SOS per minute (last 30 min)",
+      "zoneLoad": "Load by district",
+      "activeSos": "Active SOS",
+      "occupancy": "Avg. occupancy, %",
+      "empty": "No data yet",
+      "error": "Could not load analytics"
+    },
+    "popover": {
+      "zone": "District",
+      "status": "Status",
+      "type": "Type",
+      "priority": "Priority",
+      "created": "Created",
+      "eta": "Arrival",
+      "capacity": "Capacity",
+      "occupancy": "Occupancy",
+      "target": "Target",
+      "road": "Road",
+      "note": "Note",
+      "barrier": "Barrier",
+      "congestion": "Congestion factor"
+    },
+    "rerouted": {
+      "one": "{n} citizen rerouted",
+      "other": "{n} citizens rerouted"
+    }
+  },
+  "nav": {
+    "label": "Main menu",
+    "map": "Map",
+    "sos": "SOS signals",
+    "brigades": "Brigades",
+    "points": "Assembly points",
+    "alerts": "Alerts",
+    "analytics": "Analytics",
+    "collapse": "Collapse menu",
+    "expand": "Expand menu",
+    "openTable": "Open as table",
+    "showOnMap": "Show on map"
+  },
+  "pages": {
+    "mapSubtitle": "Live operations map and SOS feed",
+    "sosSubtitle": "All signals, sorted by priority",
+    "brigadesSubtitle": "Status and current tasks",
+    "pointsSubtitle": "Occupancy, capacity and reserve points",
+    "alertsSubtitle": "Red alerts awaiting confirmation",
+    "analyticsSubtitle": "Last 30 minutes and load by district",
+    "col": {
+      "type": "Type",
+      "zone": "District",
+      "time": "Time",
+      "priority": "Priority",
+      "status": "Status",
+      "brigade": "Brigade",
+      "note": "Note",
+      "actions": "Actions",
+      "name": "Name",
+      "people": "People",
+      "capacity": "Capacity",
+      "occupancy": "Occupancy",
+      "eta": "Arrival"
+    },
+    "total": "Total",
+    "openAlert": "Review and act",
+    "alertsEmpty": "No active alerts right now",
+    "alertsEmptyHint": "New alerts will appear here and at the top of the screen.",
+    "recommended": "Recommended"
+  },
+  "alert": {
+    "title": "RED ALERT",
+    "activeAlerts": "Active alerts",
+    "noActive": "No active alerts",
+    "kind": {
+      "SOS_CLUSTER": "SOS cluster",
+      "POINT_OVERLOAD": "Assembly point overloaded"
+    },
+    "toast": "Red alert: {zone}",
+    "signals": "Distinct SOS signals",
+    "window": "in the last {n} min",
+    "radius": "{m} m radius",
+    "zone": "District",
+    "recommendedBrigade": "Recommended brigade",
+    "recommendedPoint": "Recommended new assembly point",
+    "override": "Change",
+    "noBrigade": "No suitable brigade",
+    "noPoint": "No suitable reserve point",
+    "actions": "Recommended actions",
+    "actionBrigade": "Send an additional rescue brigade",
+    "actionPoint": "Open a new assembly point",
+    "confirm": "Confirm and execute",
+    "dismiss": "Dismiss",
+    "dismissReason": "Reason for dismissal",
+    "dismissPlaceholder": "E.g. false signals, already resolved…",
+    "dismissConfirm": "Confirm dismissal",
+    "dismissed": "Alert dismissed",
+    "steps": {
+      "brigade": "Brigade dispatched",
+      "point": "Assembly point opened",
+      "citizens": "Citizens rerouted"
+    },
+    "done": "Done",
+    "error": "Action failed",
+    "later": "Review later",
+    "point": "Assembly point",
+    "occupancyNow": "Current occupancy",
+    "capacity": "Capacity",
+    "eta": "{n} min",
+    "updated": "Updated",
+    "clusterSos": "SOS in this cluster",
+    "result": {
+      "title": "Result",
+      "brigade": "{brigade} → SOS #{sos}",
+      "point": "Opened: {point}",
+      "rerouted": "{n} citizen(s) rerouted",
+      "assigned": "{n} SOS assigned to the brigade",
+      "overridden": "Dispatcher overrode the recommendation",
+      "waiting": "Waiting for the result…"
+    }
+  },
+  "sim": {
+    "title": "Simulation",
+    "open": "Open simulation panel",
+    "closeRoad": "Close road",
+    "openRoad": "Open road",
+    "congest": "Create congestion",
+    "clickHint": "Tap a road on the map",
+    "occupancy": "Change occupancy",
+    "selectPoint": "Select an assembly point",
+    "apply": "Apply",
+    "burst": "Create SOS burst",
+    "burstPick": "Pick a location on the map",
+    "burstPicked": "Location selected",
+    "count": "Count",
+    "radius": "Radius, m",
+    "window": "Time window, s",
+    "type": "Type",
+    "create": "Create",
+    "reset": "Reset",
+    "resetDone": "Simulation reset",
+    "done": "Command executed",
+    "error": "Simulation command failed",
+    "cancelMode": "Cancel mode",
+    "result": {
+      "road": "{n} segment(s) updated · {r} citizen(s) rerouted",
+      "barrier": "Barrier on {n} segment(s) · {r} citizen(s) with reduced mobility rerouted",
+      "barrierRemoved": "Barrier removed from {n} segment(s)",
+      "occupancy": "{name}: {pct}% · {r} citizen(s) rerouted",
+      "alert": "Alert raised: #{id}",
+      "burst": "{n} SOS created · {a} alert(s)"
+    },
+    "lastResult": "Last result",
+    "addBarrier": "Add / remove barrier",
+    "barrierType": "Barrier type",
+    "barrierHint": "Choose, then tap a road on the map",
+    "occMode": "Mode",
+    "occAbsolute": "Absolute count",
+    "occDelta": "Change (±)",
+    "occCount": "People",
+    "resetConfirmTitle": "Reset the simulation?",
+    "resetConfirmText": "All SOS, routes, alerts and road changes will be cleared and the seeded baseline restored.",
+    "resetConfirm": "Yes, reset",
+    "routingApi": "External routing API",
+    "routingOk": "Normal (ok)",
+    "routing503": "503 error",
+    "routingTimeout": "Delay > 5 s (timeout)",
+    "delaySec": "Delay (s)",
+    "routingHelp": "The breaker opens after 3 consecutive failures and sends a trial request after 30 s.",
+    "routingStatus": "Routing mode",
+    "routingDone": "External API mode: {mode}"
+  },
+  "a11y": {
+    "mobilityImpaired": "Person with reduced mobility",
+    "stepFreeMode": "♿ Step-free mode is on",
+    "stepFreeModeHint": "Only wheelchair-accessible points and step-free routes are shown.",
+    "stepFreeRoute": "♿ Step-free route",
+    "routeMayHaveObstacles": "This route may contain obstacles",
+    "wheelchairAccessible": "Wheelchair accessible",
+    "priority1": "#1 PRIORITY",
+    "clusterHasMi": "This cluster includes persons with reduced mobility",
+    "miCount": "♿ {n}",
+    "miCountAria": "{n} of them are persons with reduced mobility"
+  },
+  "barrier": {
+    "stairs": "Stairs",
+    "underpass": "Underpass",
+    "steep": "Steep slope",
+    "curb": "High curb",
+    "narrow": "Narrow passage",
+    "inaccessible": "Inaccessible",
+    "none": "No barrier (remove)",
+    "legend": "Barriers (step-free routes avoid these)"
+  },
+  "routing": {
+    "fallback": "Running in offline/backup routing mode",
+    "fallbackDetail": "Routes are calculated from local backup data.",
+    "restored": "Online routing restored",
+    "backupBadge": "Backup mode",
+    "cached": "Last saved route",
+    "approximate": "Approximate route: follow road signs",
+    "approxDistances": "Distances are approximate",
+    "refresh": "Refresh route",
+    "service": "Routing service",
+    "online": "Online",
+    "nextTrial": "Next check in {s} s",
+    "checking": "Checking…",
+    "breaker": "Breaker",
+    "failures": "failures",
+    "log": "Event log",
+    "toastOpen": "Routing service switched to backup mode",
+    "toastHalfOpen": "Routing service is being checked",
+    "toastClosed": "Routing service is online"
+  },
+  "limits": {
+    "retryIn": "Try again in {t}"
+  },
+  "rbac": {
+    "readOnly": "Read-only: your role does not allow this action",
+    "readOnlyHint": "The operator role is read-only. Confirming or dismissing needs the dispatcher role.",
+    "forbidden": "No permission",
+    "roleLabel": "Role",
+    "role": {
+      "operator": "Operator",
+      "dispatcher": "Dispatcher",
+      "admin": "Admin"
+    }
+  },
+  "quarantine": {
+    "tab": "Quarantine",
+    "title": "Suspected signals",
+    "hint": "Suspicious SOS from new devices are kept out of the queue. Review them: release genuine ones into the queue and reject spam.",
+    "empty": "No signals in quarantine",
+    "error": "Quarantine action failed",
+    "selected": "Selected: {n} / {total}",
+    "genuine": "Genuine",
+    "spam": "Spam",
+    "releasedN": "{n} signals released into the queue",
+    "rejectedN": "{n} signals rejected as spam",
+    "alertsRaised": "{n} alerts raised",
+    "reason": {
+      "ip_mass_registration": "Many new devices registered from one IP",
+      "flood_new_device": "New device during an SOS flood"
+    },
+    "reasonUnknown": "Suspected signal",
+    "floodTitle": "SOS flood mode.",
+    "floodText": "Signals from new devices go to quarantine: {n} awaiting review.",
+    "review": "Review"
+  }
+}

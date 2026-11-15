@@ -1,0 +1,119 @@
+# Environment shared by the API and the background worker.
+x-app-env: &app-env
+  DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-baku}:${POSTGRES_PASSWORD:-baku}@db:5432/${POSTGRES_DB:-baku}
+  TEST_DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-baku}:${POSTGRES_PASSWORD:-baku}@db:5432/${POSTGRES_DB:-baku}_test
+  REDIS_URL: redis://redis:6379/0
+  TEST_REDIS_URL: redis://redis:6379/15
+  JWT_SECRET: ${JWT_SECRET:-dev-only-secret-change-me}
+  CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:5173,http://localhost:3000}
+  DB_POOL_SIZE: ${DB_POOL_SIZE:-6}
+  DB_MAX_OVERFLOW: ${DB_MAX_OVERFLOW:-3}
+  GRAPH_SOURCE: ${GRAPH_SOURCE:-synthetic}
+  CLUSTER_RADIUS_M: ${CLUSTER_RADIUS_M:-500}
+  CLUSTER_WINDOW_MIN: ${CLUSTER_WINDOW_MIN:-5}
+  CLUSTER_MIN_DISTINCT: ${CLUSTER_MIN_DISTINCT:-4}
+  REROUTE_OCCUPANCY_PCT: ${REROUTE_OCCUPANCY_PCT:-90}
+  RED_ALERT_OCCUPANCY_PCT: ${RED_ALERT_OCCUPANCY_PCT:-95}
+  SOS_COOLDOWN_SEC: ${SOS_COOLDOWN_SEC:-60}
+  NEAREST_SEARCH_RADIUS_M: ${NEAREST_SEARCH_RADIUS_M:-5000}
+  # external map & routing API (OSRM-compatible); defaults to the bundled mock with fault injection
+  EXTERNAL_ROUTING_URL: ${EXTERNAL_ROUTING_URL-http://routing-mock:8080}
+  EXTERNAL_ROUTING_PROFILE: ${EXTERNAL_ROUTING_PROFILE:-foot}
+  EXTERNAL_ROUTING_TIMEOUT_SEC: ${EXTERNAL_ROUTING_TIMEOUT_SEC:-5}
+  EXTERNAL_ROUTING_FAULT_URL: ${EXTERNAL_ROUTING_FAULT_URL-http://routing-mock:8080/__fault}
+  ROUTING_CB_FAILURE_THRESHOLD: ${ROUTING_CB_FAILURE_THRESHOLD:-3}
+  ROUTING_CB_RESET_SEC: ${ROUTING_CB_RESET_SEC:-30}
+  # SOS flood protection
+  RATE_SOS_PER_IP_PER_MIN: ${RATE_SOS_PER_IP_PER_MIN:-30}
+  RATE_REGISTER_PER_IP_PER_MIN: ${RATE_REGISTER_PER_IP_PER_MIN:-20}
+  LOGIN_MAX_FAILURES: ${LOGIN_MAX_FAILURES:-5}
+  LOGIN_LOCK_SEC: ${LOGIN_LOCK_SEC:-900}
+  SPAM_DUP_WINDOW_SEC: ${SPAM_DUP_WINDOW_SEC:-120}
+  SPAM_NEW_DEVICE_SEC: ${SPAM_NEW_DEVICE_SEC:-600}
+  SPAM_REG_PER_IP_10MIN: ${SPAM_REG_PER_IP_10MIN:-15}
+  SPAM_FLOOD_SOS_PER_10S: ${SPAM_FLOOD_SOS_PER_10S:-100}
+  CRISIS_ASYNC: ${CRISIS_ASYNC:-true}
+
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    # room for WEB_WORKERS x (DB_POOL_SIZE + DB_MAX_OVERFLOW) + worker + mock provider + tests
+    command: ["postgres", "-c", "max_connections=200"]
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-baku}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-baku}
+      POSTGRES_DB: ${POSTGRES_DB:-baku}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      # creates <POSTGRES_DB>_test with PostGIS for the test suite
+      - ./docker/postgres-init/20_test_db.sh:/docker-entrypoint-initdb.d/20_test_db.sh:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-baku} -d ${POSTGRES_DB:-baku}"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+
+  # HTTP API: only accepts and stores requests; heavy work runs in `worker`.
+  api:
+    build:
+      context: .
+      args:
+        INSTALL_OSMNX: ${INSTALL_OSMNX:-false}
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    ports:
+      - "${API_PORT:-8000}:8000"
+    environment:
+      <<: *app-env
+      WEB_WORKERS: ${WEB_WORKERS:-4}
+      CRISIS_CONSUMERS_PER_WORKER: 0
+      ENABLE_BACKGROUND_TASKS: "false"
+
+  # Crisis-queue consumers (RED ALERT detection, priorities, recommendations), periodic jobs
+  # (priority refresh, brigade movement, safety net for unprocessed SOS).
+  worker:
+    build:
+      context: .
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      api:
+        condition: service_started
+    command: ["python", "-m", "app.worker"]
+    environment:
+      <<: *app-env
+      WORKER_CONSUMERS: ${WORKER_CONSUMERS:-4}
+      ENABLE_BACKGROUND_TASKS: "true"
+
+  # Stand-in for the third-party map/routing provider (demo + resilience drills).
+  routing-mock:
+    build:
+      context: .
+    depends_on:
+      db:
+        condition: service_healthy
+    command: ["uvicorn", "mock_routing.main:app", "--host", "0.0.0.0", "--port", "8080"]
+    ports:
+      - "${ROUTING_MOCK_PORT:-8090}:8080"
+    environment:
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-baku}:${POSTGRES_PASSWORD:-baku}@db:5432/${POSTGRES_DB:-baku}
+
+volumes:
+  pgdata:

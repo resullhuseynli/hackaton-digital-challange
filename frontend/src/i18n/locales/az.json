@@ -1,0 +1,636 @@
+{
+  "language": {
+    "label": "Dil",
+    "az": "Azərbaycanca",
+    "en": "English"
+  },
+  "app": {
+    "name": "Bakı Təxliyə",
+    "dispatchTitle": "Dispetçer Paneli",
+    "fhn": "FHN",
+    "loading": "Yüklənir…",
+    "retry": "Yenidən cəhd et",
+    "close": "Bağla",
+    "cancel": "Ləğv et",
+    "confirm": "Təsdiqlə",
+    "save": "Yadda saxla",
+    "back": "Geri",
+    "notFound": "Səhifə tapılmadı",
+    "goHome": "Ana səhifəyə qayıt",
+    "unknownError": "Gözlənilməz xəta baş verdi",
+    "networkError": "Serverlə əlaqə qurmaq mümkün olmadı",
+    "empty": "Məlumat yoxdur"
+  },
+  "units": {
+    "m": "m",
+    "km": "km",
+    "min": "dəq",
+    "sec": "san",
+    "people": "nəfər"
+  },
+  "time": {
+    "justNow": "indicə",
+    "secondsAgo": "{n} san əvvəl",
+    "minutesAgo": "{n} dəq əvvəl",
+    "hoursAgo": "{n} saat əvvəl"
+  },
+  "pointType": {
+    "shelter": "Sığınacaq",
+    "park": "Park",
+    "stadium": "Stadion"
+  },
+  "pointStatus": {
+    "active": "Aktiv",
+    "reserve": "Ehtiyat",
+    "closed": "Bağlı"
+  },
+  "occupancy": {
+    "low": "Boş yer var",
+    "mid": "Sıxlıq artır",
+    "high": "Demək olar dolub",
+    "label": "Doluluq"
+  },
+  "sosType": {
+    "fire": "Yanğın",
+    "collapse": "Uçqun",
+    "flood": "Daşqın",
+    "medical": "Tibbi"
+  },
+  "sosStatus": {
+    "new": "Yeni",
+    "assigned": "Təyin edilib",
+    "resolved": "Həll edilib",
+    "rejected": "Bağlanıb"
+  },
+  "brigadeType": {
+    "fire": "Yanğınsöndürmə",
+    "medical": "Təcili tibbi yardım",
+    "rescue": "Xilasetmə"
+  },
+  "brigadeStatus": {
+    "idle": "Boşdur",
+    "en_route": "Yoldadır",
+    "on_site": "Yerindədir",
+    "returning": "Qayıdır"
+  },
+  "roadStatus": {
+    "open": "Açıq",
+    "congested": "Tıxac",
+    "closed": "Bağlıdır"
+  },
+  "rerouteReason": {
+    "initial": "İlkin marşrut",
+    "road_closed": "Yol bağlandı, yeni marşrut",
+    "point_full": "Məntəqə doludur, yeni məntəqə",
+    "alert_new_point": "Dispetçer yeni məntəqə açdı",
+    "barrier": "Marşrutda maneə aşkarlandı, pilləkənsiz yeni marşrut"
+  },
+  "citizen": {
+    "onboarding": {
+      "title": "Təhlükəsiz yerə yol göstərək",
+      "subtitle": "Ən yaxın toplanış məntəqəsini tapmaq və SOS göndərmək üçün yerləşməyinizi bilməliyik.",
+      "allow": "Məkanıma icazə ver",
+      "locating": "Məkan müəyyənləşdirilir…",
+      "denied": "Məkan icazəsi verilmədi",
+      "deniedHint": "Rayonunuzu seçin və ya xəritədə olduğunuz yerə toxunun.",
+      "chooseZone": "Rayonu seçin",
+      "tapMap": "Xəritədə yerinizi göstərin",
+      "tapMapHint": "Olduğunuz yerə toxunun",
+      "continue": "Davam et",
+      "privacy": "Məlumatlarınız yalnız xilasetmə məqsədilə istifadə olunur.",
+      "manual": "Əl ilə seçim"
+    },
+    "nearest": {
+      "title": "Ən yaxın toplanma məntəqələri",
+      "subtitle": "Məsafə və doluluğa görə sıralanıb",
+      "empty": "Yaxınlıqda aktiv məntəqə tapılmadı",
+      "emptyHint": "Xəritəni hərəkət etdirin və ya bir az sonra yenidən yoxlayın.",
+      "error": "Məntəqələri yükləmək alınmadı",
+      "nearFull": "Dolmaq üzrədir",
+      "route": "Marşrut qur",
+      "walk": "piyada",
+      "offlineCached": "Son saxlanılan məlumatlar",
+      "miSubtitle": "Yalnız əlil arabası üçün əlçatan məntəqələr göstərilir"
+    },
+    "route": {
+      "to": "Hədəf",
+      "eta": "Təxmini vaxt",
+      "distance": "Məsafə",
+      "arrived": "Çatdım",
+      "cancel": "Marşrutu bağla",
+      "building": "Marşrut hazırlanır…",
+      "error": "Marşrut qurmaq alınmadı",
+      "version": "v{n}",
+      "versionAria": "Marşrut versiyası {n}",
+      "arrivedHint": "“Çatdım” məntəqəyə 100 m qalanda aktivləşir — {d} qalıb",
+      "suggest": "Növbəti əlçatan məntəqə: {name}",
+      "showDetails": "Ətraflı göstər",
+      "hideDetails": "Ətraflını gizlət"
+    },
+    "checkIn": {
+      "title": "Siz təhlükəsiz məntəqədəsiniz",
+      "subtitle": "Qeydiyyatınız alındı. Könüllülərin və FHN əməkdaşlarının göstərişlərinə əməl edin.",
+      "done": "Bağla",
+      "error": "Qeydiyyat alınmadı"
+    },
+    "reroute": {
+      "title": "Marşrut dəyişdirildi",
+      "newEta": "Yeni vaxt",
+      "ok": "Anladım",
+      "diffPlus": "+{n} dəq",
+      "diffMinus": "−{n} dəq",
+      "diffZero": "Vaxt dəyişmədi"
+    },
+    "safe": {
+      "button": "Təhlükəsizəm",
+      "confirmTitle": "Təşəkkür edirik!",
+      "confirmText": "Statusunuz “təhlükəsiz” olaraq qeyd edildi.",
+      "error": "Statusu yeniləmək alınmadı",
+      "already": "Təhlükəsiz kimi qeyd olunub"
+    },
+    "sos": {
+      "button": "SOS",
+      "buttonAria": "Təcili yardım çağır (SOS)",
+      "title": "Nə baş verib?",
+      "subtitle": "Bir toxunuşla siqnal göndərin. Yerləşməyiniz avtomatik əlavə olunur.",
+      "countdown": "Siqnal göndərilir",
+      "countdownHint": "Səhvən basmısınızsa, ləğv edin",
+      "cancel": "Ləğv et",
+      "sending": "Göndərilir…",
+      "received": "Siqnalınız qəbul edildi",
+      "queued": "Siqnal növbəyə alındı",
+      "queuedHint": "Bağlantı bərpa olunan kimi avtomatik göndəriləcək.",
+      "statusNew": "Siqnal dispetçerə çatdı, briqada təyin olunur",
+      "statusAssigned": "Briqada yoldadır",
+      "statusAssignedEta": "Briqada yoldadır — təxminən {eta} dəq",
+      "statusResolved": "Hadisə həll edildi",
+      "stayCalm": "Sakit olun, mümkünsə təhlükəsiz yerdə qalın.",
+      "cooldown": "Siz artıq siqnal göndərmisiniz",
+      "cooldownLeft": "Yenidən göndərmək üçün: {s}",
+      "noLocation": "Yerləşmə məlum deyil — siqnal rayon üzrə göndəriləcək",
+      "error": "Siqnal göndərilmədi",
+      "close": "Bağla",
+      "steps": {
+        "new": "Qəbul edildi",
+        "assigned": "Briqada yolda",
+        "resolved": "Həll edildi"
+      },
+      "note": "Qeyd (könüllü)",
+      "notePlaceholder": "Məs.: 3-cü mərtəbə, 2 nəfər",
+      "brigade": "Briqada №{id}",
+      "etaCountdown": "Gəlişinə: {t}",
+      "etaArriving": "Briqada gəlib çatır",
+      "cooldownShort": "Gözləyin {t}",
+      "duplicate": "Bu hadisə artıq bildirilib. Siqnalınız eyni hadisəyə birləşdirildi və onu izləyirik."
+    },
+    "offline": {
+      "bar": "Bağlantı yoxdur — son məlumatlar göstərilir",
+      "back": "Bağlantı bərpa olundu",
+      "queuedSent": "Növbədəki SOS siqnalı göndərildi"
+    },
+    "location": {
+      "me": "Mənim yerim",
+      "recenter": "Yerimə qayıt",
+      "accuracy": "Dəqiqlik: ±{m} m"
+    },
+    "broadcast": "Rəsmi bildiriş",
+    "legend": {
+      "closed": "Bağlı yol",
+      "congested": "Tıxac"
+    },
+    "sheet": {
+      "handle": "Paneli sürüşdürün"
+    },
+    "tabs": {
+      "label": "Bölmələr",
+      "map": "Xəritə",
+      "points": "Məntəqələr",
+      "sos": "Siqnallarım",
+      "me": "Mən"
+    },
+    "pointsTab": {
+      "title": "Toplanma məntəqələri",
+      "subtitle": "Məsafəyə görə sıralanıb",
+      "all": "Hamısı",
+      "filterLabel": "Məntəqə növü",
+      "search": "Məntəqə axtar…",
+      "noLocation": "Məsafəni görmək üçün yerləşmənizi təyin edin",
+      "routeStarted": "Marşrut quruldu"
+    },
+    "sosTab": {
+      "title": "Siqnallarım",
+      "subtitle": "SOS statusu və tarixçəsi",
+      "send": "SOS göndər",
+      "current": "Cari siqnal",
+      "history": "Tarixçə",
+      "empty": "Hələ siqnal göndərməmisiniz",
+      "emptyHint": "Təhlükə zamanı aşağıdakı düyməyə basın — siqnal dərhal dispetçerə çatacaq.",
+      "queued": "Göndərilməyi gözləyən siqnallar",
+      "queuedHint": "İnternet bərpa olunan kimi avtomatik göndəriləcək.",
+      "error": "Siqnallar yüklənmədi",
+      "cooldown": "Növbəti siqnal: {s}"
+    },
+    "me": {
+      "title": "Mən",
+      "subtitle": "Status, yerləşmə və təcili nömrələr",
+      "status": "Statusum",
+      "safeSince": "Təhlükəsiz kimi qeyd edilib: {t}",
+      "notMarked": "Status hələ bildirilməyib",
+      "location": "Yerləşmə",
+      "gps": "GPS ilə avtomatik",
+      "manual": "Əl ilə seçilib",
+      "none": "Təyin edilməyib",
+      "district": "Rayon",
+      "change": "Yerləşməni dəyiş",
+      "emergency": "Təcili nömrələr",
+      "call": "{n} nömrəsinə zəng et",
+      "numbers": {
+        "101": "Yanğınsöndürmə",
+        "102": "Polis",
+        "103": "Təcili tibbi yardım",
+        "112": "Fövqəladə Hallar (FHN)"
+      },
+      "device": "Cihaz ID",
+      "tipsTitle": "Təxliyə zamanı",
+      "tips": [
+        "Sakit olun və marşrut göstərişlərinə əməl edin.",
+        "Liftdən istifadə etməyin, pilləkənlə enin.",
+        "Sənədlərinizi, dərmanlarınızı və suyu götürün.",
+        "Yaşlılara və uşaqlara kömək edin."
+      ]
+    },
+    "register": {
+      "title": "Qeydiyyat",
+      "subtitle": "Bir dəqiqə çəkir. Telefon nömrəsi könüllüdür.",
+      "phone": "Telefon nömrəsi (könüllü)",
+      "phoneHint": "Format: +994 50 123 45 67",
+      "phoneInvalid": "Nömrəni +994 formatında daxil edin",
+      "mi": "Hərəkət məhdudiyyətli şəxs",
+      "miHelp": "Sizə pilləkənsiz, maneəsiz marşrut göstəriləcək və SOS siqnalınız dispetçerdə prioritet olacaq.",
+      "continue": "Davam et",
+      "saving": "Saxlanılır…",
+      "error": "Qeydiyyat alınmadı"
+    },
+    "profile": {
+      "title": "Profil",
+      "save": "Yadda saxla",
+      "saved": "Profil yeniləndi"
+    },
+    "status": {
+      "switch": "Təhlükəsizəm",
+      "on": "Təhlükəsiz kimi qeyd olunmusunuz",
+      "off": "Hələ təhlükəsiz kimi qeyd olunmamısınız",
+      "error": "Statusu yeniləmək alınmadı"
+    },
+    "header": {
+      "online": "Bağlantı var",
+      "offline": "Bağlantı yoxdur"
+    }
+  },
+  "auth": {
+    "title": "Dispetçer girişi",
+    "subtitle": "Fövqəladə Hallar Nazirliyi — operativ idarəetmə",
+    "username": "İstifadəçi adı",
+    "password": "Şifrə",
+    "submit": "Daxil ol",
+    "submitting": "Yoxlanılır…",
+    "error": "Giriş alınmadı",
+    "logout": "Çıxış",
+    "demoHint": "Demo rejimi: istənilən istifadəçi adı və şifrə",
+    "sessionExpired": "Sessiyanın vaxtı bitib, yenidən daxil olun",
+    "lockedFor": "Giriş müvəqqəti bağlanıb. Yenidən cəhd: {t}"
+  },
+  "dispatch": {
+    "live": "Canlı",
+    "disconnected": "Bağlantı kəsildi",
+    "connecting": "Qoşulur…",
+    "demoMode": "Demo rejimi",
+    "mute": "Səsi söndür",
+    "unmute": "Səsi aç",
+    "kpi": {
+      "activeSos": "Aktiv SOS",
+      "resolved": "Həll olunmuş",
+      "safe": "Təhlükəsiz vətəndaşlar",
+      "inDanger": "Təhlükədə olanlar",
+      "idleBrigades": "Boş briqadalar",
+      "busyBrigades": "Məşğul briqadalar",
+      "avgOccupancy": "Orta doluluq",
+      "activeAlerts": "Aktiv həyəcanlar",
+      "citizens": "Vətəndaşlar",
+      "brigades": "Briqadalar",
+      "dangerSafe": "təhlükədə / təhlükəsiz",
+      "idleBusy": "boş / məşğul"
+    },
+    "layers": {
+      "title": "Qatlar",
+      "sos": "SOS siqnalları",
+      "heatmap": "İstilik xəritəsi",
+      "zones": "Rayonlar",
+      "points": "Məntəqələr",
+      "brigades": "Briqadalar",
+      "roads": "Yollar",
+      "barriers": "Maneələr",
+      "alerts": "Həyəcan dairələri",
+      "legend": "Leqenda",
+      "closed": "Bağlı yol",
+      "congested": "Tıxac (qalınlıq = sıxlıq)"
+    },
+    "feed": {
+      "title": "SOS axını",
+      "search": "Axtar…",
+      "searchAria": "SOS siqnallarında axtar",
+      "allZones": "Bütün rayonlar",
+      "allTypes": "Bütün növlər",
+      "allStatuses": "Bütün statuslar",
+      "activeOnly": "Aktiv",
+      "empty": "Filtrə uyğun SOS yoxdur",
+      "error": "SOS siyahısı yüklənmədi",
+      "assign": "Briqada təyin et",
+      "resolve": "Həll edildi",
+      "priority": "Prioritet",
+      "count": {
+        "one": "{n} siqnal",
+        "other": "{n} siqnal"
+      },
+      "assignedTo": "Briqada: {name}"
+    },
+    "assign": {
+      "title": "Briqada təyin et",
+      "subtitle": "Boş briqadalar, gəliş vaxtına görə sıralanıb",
+      "empty": "Hazırda boş briqada yoxdur",
+      "action": "Təyin et",
+      "success": "Briqada təyin edildi",
+      "error": "Təyin etmək alınmadı",
+      "resolved": "SOS həll edildi kimi qeyd olundu"
+    },
+    "tabs": {
+      "brigades": "Briqadalar",
+      "points": "Məntəqələr",
+      "analytics": "Analitika",
+      "sos": "SOS",
+      "alerts": "Həyəcanlar",
+      "simulation": "Simulyasiya"
+    },
+    "brigades": {
+      "empty": "Briqada yoxdur",
+      "error": "Briqadalar yüklənmədi",
+      "target": "Hədəf",
+      "noTarget": "Tapşırıq yoxdur"
+    },
+    "points": {
+      "name": "Məntəqə",
+      "occupancy": "Doluluq",
+      "capacity": "Tutum",
+      "reserve": "Ehtiyat",
+      "empty": "Məntəqə yoxdur",
+      "error": "Məntəqələr yüklənmədi"
+    },
+    "analytics": {
+      "perMinute": "Dəqiqəlik SOS (son 30 dəq)",
+      "zoneLoad": "Rayonlar üzrə yük",
+      "activeSos": "Aktiv SOS",
+      "occupancy": "Orta doluluq, %",
+      "empty": "Hələ məlumat yoxdur",
+      "error": "Analitika yüklənmədi"
+    },
+    "popover": {
+      "zone": "Rayon",
+      "status": "Status",
+      "type": "Növ",
+      "priority": "Prioritet",
+      "created": "Yaradılıb",
+      "eta": "Gəliş vaxtı",
+      "capacity": "Tutum",
+      "occupancy": "Doluluq",
+      "target": "Hədəf",
+      "road": "Yol",
+      "note": "Qeyd",
+      "barrier": "Maneə",
+      "congestion": "Sıxlıq əmsalı"
+    },
+    "rerouted": {
+      "one": "{n} vətəndaş yönləndirildi",
+      "other": "{n} vətəndaş yönləndirildi"
+    }
+  },
+  "nav": {
+    "label": "Əsas menyu",
+    "map": "Xəritə",
+    "sos": "SOS siqnalları",
+    "brigades": "Briqadalar",
+    "points": "Məntəqələr",
+    "alerts": "Həyəcan siqnalları",
+    "analytics": "Analitika",
+    "collapse": "Menyunu yığ",
+    "expand": "Menyunu aç",
+    "openTable": "Cədvəldə aç",
+    "showOnMap": "Xəritədə göstər"
+  },
+  "pages": {
+    "mapSubtitle": "Canlı əməliyyat xəritəsi və SOS axını",
+    "sosSubtitle": "Bütün siqnallar prioritetə görə sıralanıb",
+    "brigadesSubtitle": "Status və cari tapşırıqlar",
+    "pointsSubtitle": "Doluluq, tutum və ehtiyat məntəqələr",
+    "alertsSubtitle": "Təsdiq gözləyən qırmızı həyəcanlar",
+    "analyticsSubtitle": "Son 30 dəqiqə və rayonlar üzrə yük",
+    "col": {
+      "type": "Növ",
+      "zone": "Rayon",
+      "time": "Vaxt",
+      "priority": "Prioritet",
+      "status": "Status",
+      "brigade": "Briqada",
+      "note": "Qeyd",
+      "actions": "Əməliyyatlar",
+      "name": "Ad",
+      "people": "Nəfər",
+      "capacity": "Tutum",
+      "occupancy": "Doluluq",
+      "eta": "Gəliş"
+    },
+    "total": "Cəmi",
+    "openAlert": "Bax və icra et",
+    "alertsEmpty": "Hazırda aktiv həyəcan yoxdur",
+    "alertsEmptyHint": "Yeni həyəcan yarandıqda burada və ekranın yuxarısında görünəcək.",
+    "recommended": "Tövsiyə"
+  },
+  "alert": {
+    "title": "QIRMIZI HƏYƏCAN",
+    "activeAlerts": "Aktiv həyəcanlar",
+    "noActive": "Aktiv həyəcan yoxdur",
+    "kind": {
+      "SOS_CLUSTER": "SOS klasteri",
+      "POINT_OVERLOAD": "Məntəqə həddən artıq dolub"
+    },
+    "toast": "Qırmızı həyəcan: {zone}",
+    "signals": "Fərqli SOS siqnalı",
+    "window": "son {n} dəqiqədə",
+    "radius": "{m} m radius",
+    "zone": "Rayon",
+    "recommendedBrigade": "Tövsiyə olunan briqada",
+    "recommendedPoint": "Tövsiyə olunan yeni məntəqə",
+    "override": "Dəyiş",
+    "noBrigade": "Uyğun briqada yoxdur",
+    "noPoint": "Uyğun ehtiyat məntəqə yoxdur",
+    "actions": "Tövsiyə olunan addımlar",
+    "actionBrigade": "Əlavə xilasetmə briqadası göndər",
+    "actionPoint": "Yeni toplanış nöqtəsi aç",
+    "confirm": "Təsdiqlə və icra et",
+    "dismiss": "Rədd et",
+    "dismissReason": "Rədd etmə səbəbi",
+    "dismissPlaceholder": "Məs.: yalançı siqnallar, artıq həll olunub…",
+    "dismissConfirm": "Rədd etməni təsdiqlə",
+    "dismissed": "Həyəcan rədd edildi",
+    "steps": {
+      "brigade": "Briqada göndərildi",
+      "point": "Məntəqə açıldı",
+      "citizens": "Vətəndaşlar yönləndirildi"
+    },
+    "done": "İcra olundu",
+    "error": "Əməliyyat alınmadı",
+    "later": "Sonra bax",
+    "point": "Məntəqə",
+    "occupancyNow": "Hazırkı doluluq",
+    "capacity": "Tutum",
+    "eta": "{n} dəq",
+    "updated": "Yeniləndi",
+    "clusterSos": "Klasterdəki SOS siqnalları",
+    "result": {
+      "title": "Nəticə",
+      "brigade": "{brigade} → SOS #{sos}",
+      "point": "Açıldı: {point}",
+      "rerouted": "{n} vətəndaş yönləndirildi",
+      "assigned": "{n} SOS briqadaya təyin edildi",
+      "overridden": "Dispetçer tövsiyəni dəyişdi",
+      "waiting": "Nəticə gözlənilir…"
+    }
+  },
+  "sim": {
+    "title": "Simulyasiya",
+    "open": "Simulyasiya panelini aç",
+    "closeRoad": "Yolu bağla",
+    "openRoad": "Yolu aç",
+    "congest": "Tıxac yarat",
+    "clickHint": "Xəritədə yola toxunun",
+    "occupancy": "Doluluğu dəyiş",
+    "selectPoint": "Məntəqə seçin",
+    "apply": "Tətbiq et",
+    "burst": "SOS seriyası yarat",
+    "burstPick": "Xəritədə yer seçin",
+    "burstPicked": "Yer seçildi",
+    "count": "Say",
+    "radius": "Radius, m",
+    "window": "Zaman pəncərəsi, san",
+    "type": "Növ",
+    "create": "Yarat",
+    "reset": "Sıfırla",
+    "resetDone": "Simulyasiya sıfırlandı",
+    "done": "Əmr icra olundu",
+    "error": "Simulyasiya əmri alınmadı",
+    "cancelMode": "Rejimi ləğv et",
+    "result": {
+      "road": "{n} seqment yeniləndi · {r} vətəndaş yönləndirildi",
+      "barrier": "{n} seqmentdə maneə · {r} hərəkət məhdudiyyətli vətəndaş yönləndirildi",
+      "barrierRemoved": "{n} seqmentdən maneə götürüldü",
+      "occupancy": "{name}: {pct}% · {r} vətəndaş yönləndirildi",
+      "alert": "Həyəcan siqnalı yarandı: #{id}",
+      "burst": "{n} SOS yaradıldı · {a} həyəcan siqnalı"
+    },
+    "lastResult": "Son nəticə",
+    "addBarrier": "Maneə əlavə et / sil",
+    "barrierType": "Maneə növü",
+    "barrierHint": "Seçin, sonra xəritədə yola toxunun",
+    "occMode": "Rejim",
+    "occAbsolute": "Mütləq say",
+    "occDelta": "Dəyişiklik (±)",
+    "occCount": "Nəfər",
+    "resetConfirmTitle": "Simulyasiyanı sıfırlamaq?",
+    "resetConfirmText": "Bütün SOS-lar, marşrutlar, həyəcanlar və yol dəyişiklikləri silinəcək, ilkin vəziyyət bərpa olunacaq.",
+    "resetConfirm": "Bəli, sıfırla",
+    "routingApi": "Xarici marşrut API-si",
+    "routingOk": "Normal (ok)",
+    "routing503": "503 xətası",
+    "routingTimeout": "Gecikmə > 5 s (timeout)",
+    "delaySec": "Gecikmə (s)",
+    "routingHelp": "Breaker 3 ardıcıl xətadan sonra açılır, 30 s sonra yoxlama sorğusu göndərir.",
+    "routingStatus": "Marşrut rejimi",
+    "routingDone": "Xarici API rejimi: {mode}"
+  },
+  "a11y": {
+    "mobilityImpaired": "Hərəkət məhdudiyyətli şəxs",
+    "stepFreeMode": "♿ Maneəsiz rejim aktivdir",
+    "stepFreeModeHint": "Yalnız əlil arabası üçün əlçatan məntəqələr və pilləkənsiz marşrutlar göstərilir.",
+    "stepFreeRoute": "♿ Pilləkənsiz marşrut",
+    "routeMayHaveObstacles": "Bu marşrutda maneələr ola bilər",
+    "wheelchairAccessible": "Əlil arabası üçün əlçatandır",
+    "priority1": "#1 PRİORİTET",
+    "clusterHasMi": "Bu klasterdə hərəkət məhdudiyyətli şəxs var",
+    "miCount": "♿ {n}",
+    "miCountAria": "Onlardan {n} nəfər hərəkət məhdudiyyətli şəxsdir"
+  },
+  "barrier": {
+    "stairs": "Pilləkən",
+    "underpass": "Yeraltı keçid",
+    "steep": "Dik yamac",
+    "curb": "Hündür bordür",
+    "narrow": "Dar keçid",
+    "inaccessible": "Əlçatmaz",
+    "none": "Maneə yoxdur (sil)",
+    "legend": "Maneələr (pilləkənsiz marşrut bunlardan qaçır)"
+  },
+  "routing": {
+    "fallback": "Oflayn/Ehtiyat marşrut rejimində işləyir",
+    "fallbackDetail": "Marşrutlar lokal ehtiyat məlumatları ilə hesablanır.",
+    "restored": "Onlayn marşrut xidməti bərpa olundu",
+    "backupBadge": "Ehtiyat rejimi",
+    "cached": "Son saxlanılmış marşrut",
+    "approximate": "Təxmini marşrut, yol işarələrinə diqqət edin",
+    "approxDistances": "Məsafələr təxminidir",
+    "refresh": "Marşrutu yenilə",
+    "service": "Marşrut xidməti",
+    "online": "Onlayn",
+    "nextTrial": "Növbəti yoxlama: {s} s",
+    "checking": "Yoxlanılır…",
+    "breaker": "Breaker",
+    "failures": "xəta",
+    "log": "Hadisə jurnalı",
+    "toastOpen": "Marşrut xidməti ehtiyat rejiminə keçdi",
+    "toastHalfOpen": "Marşrut xidməti yoxlanılır",
+    "toastClosed": "Marşrut xidməti onlayndır"
+  },
+  "limits": {
+    "retryIn": "Yenidən cəhd: {t}"
+  },
+  "rbac": {
+    "readOnly": "Yalnız baxış: rolunuz bu əməliyyata icazə vermir",
+    "readOnlyHint": "Operator rolu yalnız baxış üçündür. Təsdiq və rədd etmək üçün dispetçer rolu tələb olunur.",
+    "forbidden": "Səlahiyyət yoxdur",
+    "roleLabel": "Rol",
+    "role": {
+      "operator": "Operator",
+      "dispatcher": "Dispetçer",
+      "admin": "Admin"
+    }
+  },
+  "quarantine": {
+    "tab": "Karantin",
+    "title": "Şübhəli siqnallar",
+    "hint": "Yeni cihazlardan gələn şübhəli SOS-lar növbədən gizlədilib. Yoxlayın: həqiqi olanları növbəyə buraxın, spamı rədd edin.",
+    "empty": "Karantində siqnal yoxdur",
+    "error": "Karantin əməliyyatı alınmadı",
+    "selected": "Seçilib: {n} / {total}",
+    "genuine": "Həqiqi",
+    "spam": "Spam",
+    "releasedN": "{n} siqnal növbəyə buraxıldı",
+    "rejectedN": "{n} siqnal spam kimi rədd edildi",
+    "alertsRaised": "{n} həyəcan siqnalı yarandı",
+    "reason": {
+      "ip_mass_registration": "Eyni IP-dən çoxlu yeni cihaz qeydiyyatı",
+      "flood_new_device": "Kütləvi SOS axını zamanı yeni cihaz"
+    },
+    "reasonUnknown": "Şübhəli siqnal",
+    "floodTitle": "SOS axını rejimi.",
+    "floodText": "Yeni cihazlardan gələn siqnallar karantinə yönləndirilir: {n} yoxlama gözləyir.",
+    "review": "Yoxla"
+  }
+}

@@ -1,0 +1,2 @@
+# Optional: only needed for `python -m app.seed.build_graph --source osm`
+osmnx==2.0.0
